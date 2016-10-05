@@ -1,0 +1,140 @@
+body {
+	padding-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+textarea.form-control {
+	background-color: #3B464C;
+	border-color: #3B464C;
+	color: rgba(255, 255, 255, 0.56);
+	resize: none;
+	&:focus {
+		border-color: #00BCD4; 
+	}
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+.eval-container {
+	background-color: #37474f;
+	color: rgba(255, 255, 255, 0.56);
+
+	.module {
+		padding: 15px;
+		border-right: 1px solid #263238;
+		min-height: ~"calc(100vh - 50px)";
+
+		/*.dial-container {
+			position: relative;
+			text-align: center;
+			margin-bottom: 15px;
+			padding: 15px;
+			cursor: pointer;
+			span {
+				text-transform: uppercase;
+				position: absolute;
+				width: 100%;
+				top: ~"calc(50% - 22px)";
+				left: 0;
+			}
+
+			&.selected {
+				background-color: #333;
+				border-radius: 4px;
+				cursor: default;
+			}
+		}*/
+	}
+
+	.sub-module {
+		.sub-module-title {
+			margin: 0;
+			font-size: 16px;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+		}
+	}
+
+	/* skill-card starts */
+	.skill-card {
+		background-color: #263238;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-radius: 4px;
+		cursor: pointer;
+		.skill-title {
+			margin: 0;
+			font-size: 16px;
+			line-height: 1;
+			.skill-score {
+				font-size: 14px;
+				line-height: 16px;
+				float: right;
+			}
+		}
+
+		&.selected {
+			background-color: #00BCD4;
+		    color: #37474F;
+		    box-shadow: none;
+		    cursor: default;
+		}
+	}
+	/* skill-card ends */
+
+	.skill-dropdown {
+		height: 36px;
+		background-color: #263238;
+	    border-color: #263238;
+	    color: rgba(255, 255, 255, 0.56);
+	    &:focus {
+			border-color: #00BCD4;
+		}
+	}
+
+	/* question-card starts */
+	.question-card {
+		background-color: #263238;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-radius: 4px;
+		.question {
+			border-bottom: 1px solid #3B464C;
+			margin-bottom: 10px;
+		}
+		.rate-answer {
+			margin-bottom: 10px;
+			p {
+				margin: 0;
+				float: left;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			.star-rating {
+				float: left;
+			}
+		}
+		.comment {
+			position: relative;
+			padding-right: 70px;
+			.btn {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+
+		&.question-card-answered {
+			.comment {
+				padding-right: 0;
+				.btn {
+					display: none;
+				}
+			}
+		}
+	}
+	/* question-card ends */
+}
