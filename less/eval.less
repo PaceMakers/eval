@@ -18,6 +18,35 @@ textarea.form-control {
 	font-size: 30px;
 }
 
+.table {
+	background-color: #263238;
+	border-radius: 4px;
+	thead {
+		tr {
+			th {
+				border-color: transparent;
+			}	
+		}
+	}
+	tbody {
+		tr {
+			td {
+				border-color: transparent;
+			}
+			&.selected {
+				background-color: #00BCD4;
+				td {
+					color: #eceff1;
+				}
+			}
+		}
+	}
+}
+
+canvas {
+	margin: 0 auto;
+}
+
 .eval-container {
 	background-color: #37474f;
 	color: rgba(255, 255, 255, 0.56);
@@ -26,27 +55,6 @@ textarea.form-control {
 		padding: 15px;
 		border-right: 1px solid #263238;
 		min-height: ~"calc(100vh - 50px)";
-
-		/*.dial-container {
-			position: relative;
-			text-align: center;
-			margin-bottom: 15px;
-			padding: 15px;
-			cursor: pointer;
-			span {
-				text-transform: uppercase;
-				position: absolute;
-				width: 100%;
-				top: ~"calc(50% - 22px)";
-				left: 0;
-			}
-
-			&.selected {
-				background-color: #333;
-				border-radius: 4px;
-				cursor: default;
-			}
-		}*/
 	}
 
 	.sub-module {
@@ -58,8 +66,9 @@ textarea.form-control {
 		}
 	}
 
-	/* skill-card starts */
-	.skill-card {
+	/* skill-card and skill-dial starts */
+	.skill-card,
+	.skill-dial {
 		background-color: #263238;
 		padding: 10px;
 		margin-bottom: 10px;
@@ -78,12 +87,36 @@ textarea.form-control {
 
 		&.selected {
 			background-color: #00BCD4;
-		    color: #37474F;
+		    color: #eceff1;
 		    box-shadow: none;
 		    cursor: default;
 		}
 	}
-	/* skill-card ends */
+
+	.skill-dial {
+		cursor: default;
+		position: relative;
+		padding-right: 70px;
+		.skill-title {
+			line-height: 50px;
+		}
+		.dial-container {
+			position: absolute;
+			width: 50px;
+			line-height: 1;
+			right: 10px;
+			top: 10px;
+			span {
+				text-transform: uppercase;
+				position: absolute;
+				width: 100%;
+				top: ~"calc(50% - 10px)";
+				left: 0;
+				text-align: center;
+			}
+		}
+	}
+	/* skill-card and skill-dial ends */
 
 	.skill-dropdown {
 		height: 36px;
@@ -124,6 +157,14 @@ textarea.form-control {
 				position: absolute;
 				bottom: 0;
 				right: 0;
+			}
+		}
+
+		&.question-card-manual {
+			.question {
+				textarea {
+					margin-bottom: 10px;
+				}
 			}
 		}
 

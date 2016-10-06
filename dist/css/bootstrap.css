@@ -3080,21 +3080,21 @@ fieldset[disabled] a.btn {
   background-color: #333;
 }
 .btn-primary {
-  color: #37474F;
+  color: #eceff1;
   background-color: #00BCD4;
   border-color: #00a5bb;
 }
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #37474F;
+  color: #eceff1;
 }
 .btn-primary:hover {
-  color: #37474F;
+  color: #eceff1;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #37474F;
+  color: #eceff1;
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -3105,7 +3105,7 @@ fieldset[disabled] a.btn {
 .btn-primary:active.focus,
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
-  color: #37474F;
+  color: #eceff1;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3114,7 +3114,7 @@ fieldset[disabled] a.btn {
 }
 .btn-primary .badge {
   color: #00BCD4;
-  background-color: #37474F;
+  background-color: #eceff1;
 }
 .btn-success {
   color: #fff;
@@ -6618,11 +6618,30 @@ textarea.form-control:focus {
 .navbar-brand {
   font-size: 30px;
 }
+.table {
+  background-color: #263238;
+  border-radius: 4px;
+}
+.table thead tr th {
+  border-color: transparent;
+}
+.table tbody tr td {
+  border-color: transparent;
+}
+.table tbody tr.selected {
+  background-color: #00BCD4;
+}
+.table tbody tr.selected td {
+  color: #eceff1;
+}
+canvas {
+  margin: 0 auto;
+}
 .eval-container {
   background-color: #37474f;
   color: rgba(255, 255, 255, 0.56);
-  /* skill-card starts */
-  /* skill-card ends */
+  /* skill-card and skill-dial starts */
+  /* skill-card and skill-dial ends */
   /* question-card starts */
   /* question-card ends */
 }
@@ -6630,26 +6649,6 @@ textarea.form-control:focus {
   padding: 15px;
   border-right: 1px solid #263238;
   min-height: calc(100vh - 50px);
-  /*.dial-container {
-			position: relative;
-			text-align: center;
-			margin-bottom: 15px;
-			padding: 15px;
-			cursor: pointer;
-			span {
-				text-transform: uppercase;
-				position: absolute;
-				width: 100%;
-				top: ~"calc(50% - 22px)";
-				left: 0;
-			}
-
-			&.selected {
-				background-color: #333;
-				border-radius: 4px;
-				cursor: default;
-			}
-		}*/
 }
 .eval-container .sub-module .sub-module-title {
   margin: 0;
@@ -6657,28 +6656,55 @@ textarea.form-control:focus {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
-.eval-container .skill-card {
+.eval-container .skill-card,
+.eval-container .skill-dial {
   background-color: #263238;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
   cursor: pointer;
 }
-.eval-container .skill-card .skill-title {
+.eval-container .skill-card .skill-title,
+.eval-container .skill-dial .skill-title {
   margin: 0;
   font-size: 16px;
   line-height: 1;
 }
-.eval-container .skill-card .skill-title .skill-score {
+.eval-container .skill-card .skill-title .skill-score,
+.eval-container .skill-dial .skill-title .skill-score {
   font-size: 14px;
   line-height: 16px;
   float: right;
 }
-.eval-container .skill-card.selected {
+.eval-container .skill-card.selected,
+.eval-container .skill-dial.selected {
   background-color: #00BCD4;
-  color: #37474F;
+  color: #eceff1;
   box-shadow: none;
   cursor: default;
+}
+.eval-container .skill-dial {
+  cursor: default;
+  position: relative;
+  padding-right: 70px;
+}
+.eval-container .skill-dial .skill-title {
+  line-height: 50px;
+}
+.eval-container .skill-dial .dial-container {
+  position: absolute;
+  width: 50px;
+  line-height: 1;
+  right: 10px;
+  top: 10px;
+}
+.eval-container .skill-dial .dial-container span {
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 10px);
+  left: 0;
+  text-align: center;
 }
 .eval-container .skill-dropdown {
   height: 36px;
@@ -6720,10 +6746,16 @@ textarea.form-control:focus {
   bottom: 0;
   right: 0;
 }
+.eval-container .question-card.question-card-manual .question textarea {
+  margin-bottom: 10px;
+}
 .eval-container .question-card.question-card-answered .comment {
   padding-right: 0;
 }
 .eval-container .question-card.question-card-answered .comment .btn {
   display: none;
+}
+.report-container .skill-card {
+  cursor: default;
 }
 /*# sourceMappingURL=bootstrap.css.map */
