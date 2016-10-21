@@ -6640,6 +6640,11 @@ canvas {
 .material-icons {
   font-size: 18px;
 }
+.eval-list {
+  background-color: #263238;
+  padding: 15px;
+  border-radius: 4px;
+}
 .eval-container {
   background-color: #37474f;
   color: rgba(255, 255, 255, 0.56);
@@ -6768,7 +6773,7 @@ canvas {
   margin-bottom: 5px;
 }
 .eval-container.profile-container .online-presence-card {
-  float: left;
+  text-align: center;
   margin: 0 15px 15px 0;
 }
 .eval-container.profile-container .online-presence-card .online-presence-card-title {
